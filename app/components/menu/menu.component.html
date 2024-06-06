@@ -1,0 +1,42 @@
+<nav>
+    <ul>
+        <li><a routerLink="/menu/espresso">espresso</a></li>
+        <li><a routerLink="/menu/americano">americano</a></li>
+        <li><a routerLink="/menu/cappuchino">cappuchino</a></li>
+        <li><a routerLink="/menu/latte">latte</a></li>
+        <li><a routerLink="/menu/raf">raf</a></li>
+    </ul>
+</nav>
+<button routerLink="/profile">Profile</button>
+
+<h1>{{category}}</h1>
+<h2>Points: {{points}}</h2>
+
+
+<div *ngIf = 'category === "espresso"'>
+<div>XS - <button (click)= "showCoupon(40)">40</button> calories:150 25ml</div>
+<div>S - <button (click)= "showCoupon(50)">50</button> calories:200 30ml</div>
+</div>
+
+<div *ngIf = 'category === "americano"'>
+<div>S - <button (click)= "showCoupon(60)">60</button> calories:300 300ml</div>
+<div>M - <button (click)= "showCoupon(80)">80</button> calories:500 400ml</div>
+</div>
+
+<div *ngIf = 'category === "cappuchino"'>
+<div>S - <button (click)= "showCoupon(60)">60</button> calories:300 300ml</div>
+<div>M - <button (click)= "showCoupon(80)">80</button> calories:500 400ml</div>
+<div>L - <button (click)= "showCoupon(100)">100</button> calories:700 500ml</div>
+</div>
+
+<div *ngIf = 'category === "latte"'>
+<div>S - <button (click)= "showCoupon(60)">60</button> calories:300 300ml</div>
+<div>M - <button (click)= "showCoupon(80)">80</button> calories:500 400ml</div>
+<div>L - <button (click)= "showCoupon(100)">100</button> calories:700 500ml</div>
+</div>
+
+<div *ngIf = 'category === "raf"'>
+<div>M - <button (click)= "showCoupon(80)">80</button> calories:500 400ml</div>
+<div>L - <button (click)= "showCoupon(100)">100</button> calories:700 500ml</div>
+<div>XL - <button (click)= "showCoupon(120)">120</button> calories:800 600ml</div>
+</div>
